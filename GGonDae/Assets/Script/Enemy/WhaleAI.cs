@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WhaleAI : EnemyAI
 {
-    /*public override void Awake()
+    public override void Awake()
     {
         base.Awake();
     }
@@ -20,24 +20,25 @@ public class WhaleAI : EnemyAI
         {
             nextdX = Random.Range(-2, 3);
             nextdY = Random.Range(-2, 3);
-            rb.velocity = new Vector2(nextdX, nextdY);
+            rb.velocity = new Vector2(nextdX, nextdY)*1.2f;
             Invoke("Direction", 2);
         }
         else if(isTracing==true){
-            rb.velocity = new Vector2(0, 0);
-            Debug.Log(rb.velocity);
-            Trace();
+            Invoke("Trace", 3);
         }
     }
     protected override void Trace()
     {
         if(isTracing == true){
-            Player player = traceTarget.GetComponent<PlayerManager>();
-            player.PlayerHp -= 50.0f;
-            isMoving = true;
-            isTracing = false;
+            GameObject player = traceTarget;
+            if (player != null)
+            {
+                PlayerManager playerhp = player.GetComponent<PlayerManager>();
+            
+                playerhp.PlayerHp -= 50.0f;
+        
+            }
         }
-        Debug.Log("Trace End");
         Invoke("Direction", 2);
-    }*/
+    }
 }

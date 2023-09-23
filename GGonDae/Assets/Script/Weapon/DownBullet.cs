@@ -23,7 +23,7 @@ public class DownBullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        GameObject enemy = GameObject.Find("Shark");
+        GameObject enemy = collision.gameObject;
         if (enemy != null)
         {
             SharkController enemyHP = enemy.GetComponent<SharkController>();

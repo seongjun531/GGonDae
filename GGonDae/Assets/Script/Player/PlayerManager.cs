@@ -20,6 +20,7 @@ public class PlayerManager : MonoBehaviour
         {
             SceneManager.LoadScene("SelectScene");
         }
+        playerdie();
     }
     public void playerdie()
     {

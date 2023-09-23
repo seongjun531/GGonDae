@@ -28,7 +28,6 @@ public class SharkAI : EnemyAI
             Invoke("Trace", 3);
         }
     }
-
     protected override void Trace()
     {
         if(isTracing == true){

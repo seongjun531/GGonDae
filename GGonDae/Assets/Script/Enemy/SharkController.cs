@@ -22,14 +22,13 @@ public class SharkController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        GameObject player = GameObject.Find("Player");
+        GameObject player = collision.gameObject;
         if (player != null)
         {
             PlayerManager playerhp = player.GetComponent<PlayerManager>();
-            if (collision.gameObject.tag.Equals("player"))
-            {
-                playerhp.PlayerHp -= sharkdamage;
-            }
+            
+            playerhp.PlayerHp -= sharkdamage;
+        
         }
     }
 }

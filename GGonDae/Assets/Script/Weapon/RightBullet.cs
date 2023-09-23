@@ -20,10 +20,9 @@ public class RightBullet : MonoBehaviour
         transform.Translate(bulletSpeed * Time.deltaTime, 0, 0);
     }
 
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        GameObject enemy = GameObject.Find("Shark");
+        GameObject enemy = collision.gameObject;
         if (enemy != null)
         {
             SharkController enemyHP = enemy.GetComponent<SharkController>();
