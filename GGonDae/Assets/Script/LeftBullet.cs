@@ -6,7 +6,7 @@ public class LeftBullet : MonoBehaviour
 {
     GameObject player;
     public float bulletSpeed = 10.0f;
-
+    public float bulletDamage = 100.0f;
     void Start()
     {
         this.player = GameObject.Find("Boat2");
@@ -17,5 +17,16 @@ public class LeftBullet : MonoBehaviour
     void Update()
     {
         transform.Translate(-bulletSpeed * Time.deltaTime, 0, 0);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        GameObject enemy = GameObject.Find("Enemy");
+        EnemyAI enemyHP = enemy.GetComponent<EnemyAI>();
+        if (collision.gameObject.name.Equals("Bullet"))
+        {
+            Destroy(this.gameObject);
+            enemyHP.Hp -= bulletDamage;
+        }
     }
 }
