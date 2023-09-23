@@ -11,17 +11,17 @@ public class EnemyAI : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        Invoke("Direction", 5);
+        Direction();
     }
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(nextdX, nextdY);
+
     }
     void Direction()
     {
         nextdX = Random.Range(-1, 2);
         nextdY = Random.Range(-1, 2);
-
-        Invoke("Direction", 5);
+        rb.velocity = new Vector2(nextdX, nextdY);
+        Invoke("Direction", 2);
     }
 }
