@@ -13,8 +13,7 @@ public class SharkAI : EnemyAI
     {
 
     }
-
-    public override void Direction()
+    protected override void Direction()
     {
         if (isMoving == true)
         {
@@ -25,19 +24,21 @@ public class SharkAI : EnemyAI
         }
         else if(isTracing==true){
             rb.velocity = new Vector2(0, 0);
+            Debug.Log(rb.velocity);
             Invoke("Trace", 3);
         }
     }
 
-    public override void Trace()
+    protected override void Trace()
     {
         if(isTracing == true){
             Vector2 playerPos = traceTarget.transform.position;
             rb.velocity = (playerPos - new Vector2(transform.position.x, transform.position.y))*tSpeed;
+            Debug.Log(rb.velocity);
             isMoving = true;
             isTracing = false;
         }
         Debug.Log("Trace End");
-        Direction();
+        Invoke("Direction", 2);
     }
 }

@@ -6,8 +6,6 @@ public class EnemyAI : MonoBehaviour
 {
     public int nextdX, nextdY;
     public Rigidbody2D rb;
-    public float moveSpeed = 1f;
-    public float traceSpeed = 1.5f;
     public bool isMoving = true;
     public bool isTracing = false;
     public GameObject traceTarget;
@@ -26,7 +24,7 @@ public class EnemyAI : MonoBehaviour
             Trace();
         }
     }
-    public virtual void Direction()
+    protected virtual void Direction()
     {
         if (isMoving == true)
         {
@@ -36,7 +34,7 @@ public class EnemyAI : MonoBehaviour
             Invoke("Direction", 2);
         }
     }
-    public virtual void Trace() { 
+    protected virtual void Trace() { 
         if(isTracing == true) {
             Vector2 playerPos = traceTarget.transform.position;
             Debug.Log(playerPos - new Vector2(transform.position.x, transform.position.y));
