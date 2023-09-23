@@ -8,7 +8,6 @@ public class EnemyAI : MonoBehaviour
     public Rigidbody2D rb;
     public float moveSpeed = 1f;
     public float traceSpeed = 1.5f;
-    public float Hp = 1000.0f;
     bool isMoving = true;
     bool isTracing = false;
     GameObject traceTarget;
@@ -42,21 +41,9 @@ public class EnemyAI : MonoBehaviour
     void Trace() { 
         if(isTracing == true) {
             Vector2 playerPos = traceTarget.transform.position;
-            if (playerPos.x < transform.position.x){
-                rb.velocity = new Vector2(-traceSpeed, rb.velocity.y);
-            }
+            Debug.Log(playerPos - new Vector2(transform.position.x, transform.position.y));
 
-            else if(playerPos.x > transform.position.x){
-                rb.velocity = new Vector2(traceSpeed, rb.velocity.y);
-            }
-
-            if (playerPos.y < transform.position.y){
-                rb.velocity = new Vector2(rb.velocity.x, -traceSpeed);
-            }
-
-            else if(playerPos.y > transform.position.y){
-                rb.velocity = new Vector2(rb.velocity.x, traceSpeed);
-            }
+            rb.velocity = playerPos - new Vector2(transform.position.x, transform.position.y);
             Direction();
         }
         
