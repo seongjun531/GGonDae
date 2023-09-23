@@ -103,8 +103,6 @@ MonoBehaviour:
   nextdX: 0
   nextdY: 0
   rb: {fileID: 0}
-  moveSpeed: 1
-  traceSpeed: 1.5
   isMoving: 1
   isTracing: 0
   traceTarget: {fileID: 0}
@@ -211,7 +209,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
