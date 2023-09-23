@@ -7,6 +7,7 @@ public class EnemyAI : MonoBehaviour
     public int nextdX, nextdY;
     public Rigidbody2D rb;
     public float moveSpeed = 1f;
+    public float Hp = 1000.0f;
 
     void Awake()
     {
