@@ -8,27 +8,25 @@ public class EnemyAI : MonoBehaviour
     public Rigidbody2D rb;
     public float moveSpeed = 1f;
     public float traceSpeed = 1.5f;
-    bool isMoving = true;
-    bool isTracing = false;
-    GameObject traceTarget;
+    public bool isMoving = true;
+    public bool isTracing = false;
+    public GameObject traceTarget;
 
-    void Awake()
+    public virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        Direction();
         Invoke("Direction", 2);
     }
 
     void Update()
     {
-
         if (isTracing == true)
         {
             isMoving = false;
             Trace();
         }
     }
-    void Direction()
+    public virtual void Direction()
     {
         if (isMoving == true)
         {
@@ -38,7 +36,7 @@ public class EnemyAI : MonoBehaviour
             Invoke("Direction", 2);
         }
     }
-    void Trace() { 
+    public virtual void Trace() { 
         if(isTracing == true) {
             Vector2 playerPos = traceTarget.transform.position;
             Debug.Log(playerPos - new Vector2(transform.position.x, transform.position.y));
@@ -52,7 +50,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (other.gameObject.tag == "Player"){
             traceTarget = other.gameObject;
-            Debug.Log("asdfa");
+            Debug.Log("trace Start");
             isMoving = false;
             isTracing = true;
         }
