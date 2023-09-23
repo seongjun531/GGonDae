@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerCam : MonoBehaviour
 {
-    /*public GameObject virtualCam;
+    public GameObject virtualCam;
     private void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Player") && !other.isTrigger){
-            virtualCam,SetActive(true);
+            virtualCam.SetActive(true);
         }
     }
 
@@ -15,5 +15,5 @@ public class PlayerCam : MonoBehaviour
         if(other.CompareTag("Player") && !other.isTrigger){
             virtualCam.SetActive(false);
         }
-    }*/
+    }
 }
