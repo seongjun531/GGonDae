@@ -35,6 +35,16 @@ public class Weapon : MonoBehaviour
                 Instantiate(leftbullet);
                 currTime = 0;
             }
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                Instantiate(upbullet);
+                currTime = 0;
+            }
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                Instantiate(downbullet);
+                currTime = 0;
+            }
         }
     }
 
