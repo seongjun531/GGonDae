@@ -29,7 +29,6 @@ public class SharkController : MonoBehaviour
             if (collision.gameObject.tag.Equals("player"))
             {
                 playerhp.PlayerHp -= sharkdamage;
-                Destroy(this.gameObject);
             }
         }
     }
