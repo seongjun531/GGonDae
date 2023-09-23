@@ -27,12 +27,12 @@ public class Weapon : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.D))
             {
-                GameObject Bullet = Instantiate(rightbullet);
+                Instantiate(rightbullet);
                 currTime = 0;
             }
             if (Input.GetKeyDown(KeyCode.A))
             {
-                GameObject Bullet = Instantiate(leftbullet);
+                Instantiate(leftbullet);
                 currTime = 0;
             }
         }

@@ -9,7 +9,7 @@ public class LeftBullet : MonoBehaviour
 
     void Start()
     {
-        this.player = GameObject.Find("asdf");
+        this.player = GameObject.Find("Boat2");
         transform.position = this.player.transform.position;
     }
 
