@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1858802057841306834}
   - component: {fileID: 471169775007707511}
   - component: {fileID: 4279689984010713887}
-  - component: {fileID: 6121012466061672456}
   - component: {fileID: 6213028040687389774}
   m_Layer: 0
   m_Name: Shark
@@ -196,24 +195,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
---- !u!114 &6121012466061672456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6849332196683894073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bdde0086814a5840b13a33392e69773, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextdX: 0
-  nextdY: 0
-  rb: {fileID: 0}
-  moveSpeed: 1
-  traceSpeed: 1.5
-  Hp: 1000
 --- !u!50 &6213028040687389774
 Rigidbody2D:
   serializedVersion: 4

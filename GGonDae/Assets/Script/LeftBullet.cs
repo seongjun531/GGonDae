@@ -21,12 +21,13 @@ public class LeftBullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        GameObject enemy = GameObject.Find("Enemy");
+        GameObject enemy = GameObject.Find("Shark");
         EnemyAI enemyHP = enemy.GetComponent<EnemyAI>();
-        if (collision.gameObject.name.Equals("Bullet"))
+
+        if (collision.gameObject.tag.Equals("Enemy"))
         {
-            Destroy(this.gameObject);
             enemyHP.Hp -= bulletDamage;
+            Destroy(this.gameObject);
         }
     }
 }

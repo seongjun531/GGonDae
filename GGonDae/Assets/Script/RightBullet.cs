@@ -19,11 +19,12 @@ public class RightBullet : MonoBehaviour
         transform.Translate(bulletSpeed * Time.deltaTime, 0, 0);
     }
 
-    
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        GameObject enemy = GameObject.Find("Enemy");
+        GameObject enemy = GameObject.Find("Shark");
         EnemyAI enemyHP = enemy.GetComponent<EnemyAI>();
+
         if (collision.gameObject.tag.Equals("Enemy"))
         {
             enemyHP.Hp -= bulletDamage;
