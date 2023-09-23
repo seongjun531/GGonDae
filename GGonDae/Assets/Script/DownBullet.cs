@@ -11,7 +11,7 @@ public class DownBullet : MonoBehaviour
     {
         this.player = GameObject.Find("Boat2");
         transform.position = this.player.transform.position;
-        transform.position = new Vector3(transform.position.x, transform.position.y - 1, 0);
+        transform.position = new Vector3(transform.position.x, transform.position.y - 1.5f, 0);
     }
 
     // Update is called once per frame

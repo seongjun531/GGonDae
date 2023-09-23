@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
     public GameObject downbullet;
     public GameObject rightbullet;
     public GameObject leftbullet;
-
+    public Animator animator;
 
 
     void Start()
@@ -27,6 +27,7 @@ public class Weapon : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.D))
             {
+                animator.SetBool("DownBool", true);
                 Instantiate(rightbullet);
                 currTime = 0;
             }
@@ -37,6 +38,7 @@ public class Weapon : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.W))
             {
+                animator.SetBool("UpBool", true);
                 Instantiate(upbullet);
                 currTime = 0;
             }
