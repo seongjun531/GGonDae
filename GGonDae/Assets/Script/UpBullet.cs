@@ -11,6 +11,7 @@ public class UpBullet : MonoBehaviour
     {
         this.player = GameObject.Find("Boat2");
         transform.position = this.player.transform.position;
+        transform.position = new Vector3(transform.position.x, transform.position.y + 1.5f, 0);
     }
 
     // Update is called once per frame
@@ -23,12 +24,14 @@ public class UpBullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject enemy = GameObject.Find("Shark");
-        SharkController enemyHP = enemy.GetComponent<SharkController>();
-
-        if (collision.gameObject.tag.Equals("Enemy"))
+        if (enemy != null)
         {
-            enemyHP.Hp -= bulletDamage;
-            Destroy(this.gameObject);
+            SharkController enemyHP = enemy.GetComponent<SharkController>();
+            if (collision.gameObject.tag.Equals("Enemy"))
+            {
+                enemyHP.Hp -= bulletDamage;
+                Destroy(this.gameObject);
+            }
         }
     }
 }
