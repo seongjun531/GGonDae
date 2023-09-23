@@ -22,7 +22,7 @@ public class LeftBullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject enemy = GameObject.Find("Shark");
-        EnemyAI enemyHP = enemy.GetComponent<EnemyAI>();
+        SharkController enemyHP = enemy.GetComponent<SharkController>();
 
         if (collision.gameObject.tag.Equals("Enemy"))
         {
