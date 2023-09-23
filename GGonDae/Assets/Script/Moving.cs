@@ -7,7 +7,6 @@ public class Moving : MonoBehaviour
     public float playerSpeed = 3.0f;
     public float maxSpeed = 100.0f;
     Rigidbody2D rid2D;
-    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {

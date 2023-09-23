@@ -11,6 +11,7 @@ public class RightBullet : MonoBehaviour
     {
         this.player = GameObject.Find("Boat2");
         transform.position = this.player.transform.position;
+        transform.position = new Vector3(transform.position.x + 1.5f, transform.position.y, 0);
     }
 
     // Update is called once per frame

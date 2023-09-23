@@ -145,6 +145,7 @@ MonoBehaviour:
   downbullet: {fileID: 4459716505736362487, guid: 5e0c084992009fe41afd1c8c353c2ef9, type: 3}
   rightbullet: {fileID: 883906096444610893, guid: 7749ac3526daea941aea35d2343e6e74, type: 3}
   leftbullet: {fileID: 883906096444610893, guid: ee17fa357ae641540848db5b973d8f21, type: 3}
+  animator: {fileID: 0}
 --- !u!1 &342593585 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6849332196683894073, guid: 8aaeba14310ad164ab6852b53b0e0698, type: 3}
@@ -162,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d632b4b3ea7df01459070820aa005b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 1000
+  Hp: 200
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3479,37 +3480,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &921028626
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 921028627}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &921028627
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 921028626}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1988048113
 GameObject:
   m_ObjectHideFlags: 0
@@ -3624,6 +3594,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4390732034082046976, guid: b95476c6269f3ce4ab553a852c222612, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4390732034082046976, guid: b95476c6269f3ce4ab553a852c222612, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -3719,4 +3693,3 @@ SceneRoots:
   - {fileID: 3626431603501609381}
   - {fileID: 1988048115}
   - {fileID: 5155549653671985685}
-  - {fileID: 921028627}
