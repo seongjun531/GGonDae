@@ -6,10 +6,15 @@ public class EnemyAI : MonoBehaviour
 {
     int nextdX, nextdY;
     public Rigidbody2D rb;
+<<<<<<< HEAD
     public float traceSpeed = 1.5f;
     public float Hp = 1000.0f;
     bool isMoving = true;
     bool isTracing = false;
+
+=======
+    public float moveSpeed = 1f;
+>>>>>>> parent of 2082735 (적 hp 추가)
 
     void Awake()
     {
@@ -52,7 +57,7 @@ public class EnemyAI : MonoBehaviour
     void OnTriggerEnter2D(Collider other)
     {
         if (other.gameObject.tag == "Player"){
-            traceTarget - other.gameObject;
+            gameObject traceTarget = other.gameObject;
 
             isMoving = false;
         }
