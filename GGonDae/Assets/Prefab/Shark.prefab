@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6151818886997202811}
   - component: {fileID: 2919577631723190479}
   - component: {fileID: 6991835779626025909}
+  - component: {fileID: 2245136315817905931}
   - component: {fileID: 471169775007707511}
   - component: {fileID: 4279689984010713887}
   - component: {fileID: 6213028040687389774}
@@ -107,6 +108,19 @@ MonoBehaviour:
   isTracing: 0
   traceTarget: {fileID: 0}
   tSpeed: 2
+--- !u!114 &2245136315817905931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6849332196683894073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d632b4b3ea7df01459070820aa005b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hp: 100
 --- !u!60 &471169775007707511
 PolygonCollider2D:
   m_ObjectHideFlags: 0

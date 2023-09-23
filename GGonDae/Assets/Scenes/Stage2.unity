@@ -3694,7 +3694,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 1141850102}
+  m_Follow: {fileID: 1156390901}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
@@ -10720,7 +10720,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 1141850102}
+  m_Follow: {fileID: 1156390901}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
@@ -10898,7 +10898,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 1141850102}
+  m_Follow: {fileID: 1156390901}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
@@ -14308,7 +14308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   virtualCam: {fileID: 184995466}
---- !u!1001 &737924737
+--- !u!1001 &795348203
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -14318,11 +14318,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1108000151918691754, guid: aaf5c9d2494aa2441850339c012e81f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.83
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1108000151918691754, guid: aaf5c9d2494aa2441850339c012e81f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.64
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1108000151918691754, guid: aaf5c9d2494aa2441850339c012e81f9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14355,14 +14355,6 @@ PrefabInstance:
     - target: {fileID: 1108000151918691754, guid: aaf5c9d2494aa2441850339c012e81f9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2596208803230707619, guid: aaf5c9d2494aa2441850339c012e81f9, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2596208803230707619, guid: aaf5c9d2494aa2441850339c012e81f9, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4633974066225531230, guid: aaf5c9d2494aa2441850339c012e81f9, type: 3}
       propertyPath: m_Name
@@ -17872,7 +17864,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 1141850102}
+  m_Follow: {fileID: 1156390901}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
@@ -22982,10 +22974,10 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!4 &1141850102 stripped
+--- !u!4 &1156390901 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1108000151918691754, guid: aaf5c9d2494aa2441850339c012e81f9, type: 3}
-  m_PrefabInstance: {fileID: 737924737}
+  m_PrefabInstance: {fileID: 795348203}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1217324011
 GameObject:
@@ -26431,7 +26423,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 1141850102}
+  m_Follow: {fileID: 1156390901}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
@@ -29899,7 +29891,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 1141850102}
+  m_Follow: {fileID: 1156390901}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
@@ -29960,7 +29952,7 @@ TilemapCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389119207}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -30482,7 +30474,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 1141850102}
+  m_Follow: {fileID: 1156390901}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
@@ -30657,6 +30649,7 @@ GameObject:
   - component: {fileID: 1675027936}
   - component: {fileID: 1675027935}
   - component: {fileID: 1675027940}
+  - component: {fileID: 1675027941}
   - component: {fileID: 1675027938}
   - component: {fileID: 1675027939}
   - component: {fileID: 1675027937}
@@ -34019,6 +34012,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   virtualCam: {fileID: 1114332042}
+--- !u!114 &1675027941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675027933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0752803b52955947a576aadb46d8a57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs: {fileID: 6849332196683894073, guid: 8aaeba14310ad164ab6852b53b0e0698, type: 3}
+  Door: {fileID: 1389119207}
+  rand: 1
 --- !u!1 &1704323806
 GameObject:
   m_ObjectHideFlags: 3
@@ -34265,7 +34273,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 1141850102}
+  m_Follow: {fileID: 1156390901}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
@@ -37817,7 +37825,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 1141850102}
+  m_Follow: {fileID: 1156390901}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
@@ -37843,4 +37851,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 47286681}
   - {fileID: 1559806996}
-  - {fileID: 737924737}
+  - {fileID: 795348203}
