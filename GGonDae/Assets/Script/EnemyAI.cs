@@ -20,6 +20,15 @@ public class EnemyAI : MonoBehaviour
         Invoke("Direction", 2);
     }
 
+    void Update()
+    {
+
+        if (isTracing == true)
+        {
+            isMoving = false;
+            Trace();
+        }
+    }
     void Direction()
     {
         if (isMoving == true)
@@ -29,8 +38,9 @@ public class EnemyAI : MonoBehaviour
             rb.velocity = new Vector2(nextdX, nextdY);
             Invoke("Direction", 2);
         }
-
-        else if(isTracing == true) {
+    }
+    void Trace() { 
+        if(isTracing == true) {
             Vector2 playerPos = traceTarget.transform.position;
             if (playerPos.x < transform.position.x){
                 rb.velocity = new Vector2(-traceSpeed, rb.velocity.y);
