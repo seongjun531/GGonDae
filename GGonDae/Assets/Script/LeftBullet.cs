@@ -19,6 +19,7 @@ public class LeftBullet : MonoBehaviour
         transform.Translate(-bulletSpeed * Time.deltaTime, 0, 0);
     }
 
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject enemy = GameObject.Find("Shark");

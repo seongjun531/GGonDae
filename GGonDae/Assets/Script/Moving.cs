@@ -11,7 +11,6 @@ public class Moving : MonoBehaviour
     void Start()
     {
         rid2D = GetComponent<Rigidbody2D>();
-
     }
 
     // Update is called once per frame
