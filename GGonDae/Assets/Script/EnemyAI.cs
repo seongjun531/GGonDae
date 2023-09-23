@@ -1,22 +1,17 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class EnemyAI : MonoBehaviour
 {
     public int nextdX, nextdY;
     public Rigidbody2D rb;
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
     public float moveSpeed = 1f;
->>>>>>> Stashed changes
     public float traceSpeed = 1.5f;
     public float Hp = 1000.0f;
     bool isMoving = true;
     bool isTracing = false;
-
-=======
-    public float moveSpeed = 1f;
->>>>>>> parent of 2082735 (적 hp 추가)
+    GameObject traceTarget;
 
     void Awake()
     {
@@ -27,20 +22,15 @@ public class EnemyAI : MonoBehaviour
 
     void Direction()
     {
-        nextdX = Random.Range(-2, 3);
-        nextdY = Random.Range(-2, 3);
-        rb.velocity = new Vector2(nextdX, nextdY);
-        Invoke("Direction", 2);
-        if (isMoving)
+        if (isMoving == true)
         {
             nextdX = Random.Range(-2, 3);
             nextdY = Random.Range(-2, 3);
             rb.velocity = new Vector2(nextdX, nextdY);
             Invoke("Direction", 2);
         }
-<<<<<<< Updated upstream
 
-        else if(isTracing) {
+        else if(isTracing == true) {
             Vector2 playerPos = traceTarget.transform.position;
             if (playerPos.x < transform.position.x){
                 rb.velocity = new Vector2(-traceSpeed, rb.velocity.y);
@@ -57,23 +47,17 @@ public class EnemyAI : MonoBehaviour
             else if(playerPos.y > transform.position.y){
                 rb.velocity = new Vector2(rb.velocity.x, traceSpeed);
             }
+            Direction();
         }
         
     }
-    void OnTriggerEnter2D(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player"){
-            gameObject traceTarget = other.gameObject;
-
+            traceTarget = other.gameObject;
+            Debug.Log("asdfa");
             isMoving = false;
-        }
-    }
-    void OnTriggerStay2D(Collider other)
-    {
-        if (other.gameObject.tag == "Player"){
             isTracing = true;
         }
-=======
->>>>>>> Stashed changes
     }
 }
