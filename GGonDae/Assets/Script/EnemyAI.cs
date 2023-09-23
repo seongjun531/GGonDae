@@ -11,6 +11,7 @@ public class EnemyAI : MonoBehaviour
     bool isMoving = true;
     bool isTracing = false;
 
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -52,7 +53,7 @@ public class EnemyAI : MonoBehaviour
     void OnTriggerEnter2D(Collider other)
     {
         if (other.gameObject.tag == "Player"){
-            traceTarget - other.gameObject;
+            gameObject traceTarget = other.gameObject;
 
             isMoving = false;
         }
