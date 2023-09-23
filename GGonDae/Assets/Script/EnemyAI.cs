@@ -19,8 +19,8 @@ public class EnemyAI : MonoBehaviour
     }
     void Direction()
     {
-        nextdX = Random.Range(-1, 2);
-        nextdY = Random.Range(-1, 2);
+        nextdX = Random.Range(-2, 3);
+        nextdY = Random.Range(-2, 3);
         rb.velocity = new Vector2(nextdX, nextdY);
         Invoke("Direction", 2);
     }
