@@ -27,23 +27,33 @@ public class Weapon : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.D))
             {
-                animator.SetBool("DownBool", true);
+                animator.SetBool("UpBool", false);
+                animator.SetBool("DownBool", false);
+                GetComponent<SpriteRenderer>().flipX = false;
                 Instantiate(rightbullet);
                 currTime = 0;
             }
             if (Input.GetKeyDown(KeyCode.A))
             {
+                animator.SetBool("UpBool", false);
+                animator.SetBool("DownBool", false);
+                GetComponent<SpriteRenderer>().flipX = true;
                 Instantiate(leftbullet);
                 currTime = 0;
             }
             if (Input.GetKeyDown(KeyCode.W))
             {
                 animator.SetBool("UpBool", true);
+                animator.SetBool("DownBool", false);
+                GetComponent<SpriteRenderer>().flipX = false;
                 Instantiate(upbullet);
                 currTime = 0;
             }
             if (Input.GetKeyDown(KeyCode.S))
             {
+                animator.SetBool("UpBool", false);
+                animator.SetBool("DownBool", true);
+                GetComponent<SpriteRenderer>().flipX = false;
                 Instantiate(downbullet);
                 currTime = 0;
             }
