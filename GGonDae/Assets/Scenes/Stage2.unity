@@ -15813,9 +15813,17 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4401906898379339807, guid: aaf5c9d2494aa2441850339c012e81f9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 680057c9e01a156469bca71759822452, type: 3}
     - target: {fileID: 4633974066225531230, guid: aaf5c9d2494aa2441850339c012e81f9, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4633974066225531230, guid: aaf5c9d2494aa2441850339c012e81f9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3060703736488146024, guid: aaf5c9d2494aa2441850339c012e81f9, type: 3}
@@ -41396,6 +41404,10 @@ PrefabInstance:
     - target: {fileID: 8237813388574165727, guid: 70bac15dd4ad9874998ac20ee09fdfef, type: 3}
       propertyPath: m_Name
       value: Rock1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8237813388574165727, guid: 70bac15dd4ad9874998ac20ee09fdfef, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
