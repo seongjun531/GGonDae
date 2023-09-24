@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2400151b029b35d4388b931c6ea2ae16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 3
+  playerSpeed: 1
   maxSpeed: 100
 --- !u!114 &56432770665142400
 MonoBehaviour:
