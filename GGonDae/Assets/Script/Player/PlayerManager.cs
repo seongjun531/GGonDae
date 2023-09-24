@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
+    Animator animator;
     public float PlayerHp = 100.0f;
     public bool isdie = false;
     // Start is called before the first frame update
@@ -18,7 +19,7 @@ public class PlayerManager : MonoBehaviour
     {
         if(isdie == true)
         {
-            SceneManager.LoadScene("SelectScene");
+            Invoke("DieScene", 2f);   
         }
         playerdie();
     }
@@ -27,6 +28,13 @@ public class PlayerManager : MonoBehaviour
         if(PlayerHp <= 0)
         {
             isdie = true;
+            animator.SetBool("UpBool", false);
+            animator.SetBool("DownBool", false);
+            animator.SetBool("DieTrigger", true);
         }
+    }
+    public void DieScene()
+    {
+        SceneManager.LoadScene("SelectScene");
     }
 }
