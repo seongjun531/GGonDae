@@ -18,6 +18,7 @@ public class DownBullet : MonoBehaviour
     void Update()
     {
         transform.Translate(0, -bulletSpeed * Time.deltaTime, 0);
+        Invoke("destroybullet", 0.7f);
     }
 
 
@@ -32,6 +33,14 @@ public class DownBullet : MonoBehaviour
                 enemyHP.Hp -= bulletDamage;
                 Destroy(this.gameObject);
             }
+            if (collision.gameObject.tag.Equals("Wall"))
+            {
+                Destroy(this.gameObject);
+            }
         }
+    }
+    public void destroybullet()
+    {
+        Destroy(this.gameObject);
     }
 }

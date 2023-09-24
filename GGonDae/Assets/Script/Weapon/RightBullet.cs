@@ -18,6 +18,7 @@ public class RightBullet : MonoBehaviour
     void Update()
     {
         transform.Translate(bulletSpeed * Time.deltaTime, 0, 0);
+        Invoke("destroybullet", 0.7f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -30,7 +31,11 @@ public class RightBullet : MonoBehaviour
             {
                 enemyHP.Hp -= bulletDamage;
                 Destroy(this.gameObject);
-            }
+            }   
         }
+    }
+    public void destroybullet()
+    {
+        Destroy(this.gameObject);
     }
 }
