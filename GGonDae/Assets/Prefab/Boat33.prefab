@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2883483283998243990}
+  - component: {fileID: -2833278524106951089}
   - component: {fileID: 8155515933960178140}
   - component: {fileID: 3654561694714912755}
   - component: {fileID: 7375091392457493616}
-  - component: {fileID: -2833278524106951089}
   m_Layer: 0
   m_Name: Boat33
   m_TagString: Untagged
@@ -35,6 +35,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-2833278524106951089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4050545707794315528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f9dc99f81beca44f9d49ed8d95a80fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootdelay: 2
+  upbullet: {fileID: 1347937034720051059, guid: cd02b89420454b741846d97a8f2696ac, type: 3}
+  downbullet: {fileID: 4459716505736362487, guid: 5e0c084992009fe41afd1c8c353c2ef9, type: 3}
+  rightbullet: {fileID: 883906096444610893, guid: 7749ac3526daea941aea35d2343e6e74, type: 3}
+  leftbullet: {fileID: 883906096444610893, guid: ee17fa357ae641540848db5b973d8f21, type: 3}
+  animator: {fileID: 0}
 --- !u!212 &8155515933960178140
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -166,21 +184,3 @@ PolygonCollider2D:
       - {x: 0.31, y: -0.17}
       - {x: 0.25, y: -0.02}
   m_UseDelaunayMesh: 0
---- !u!114 &-2833278524106951089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4050545707794315528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f9dc99f81beca44f9d49ed8d95a80fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootdelay: 2
-  upbullet: {fileID: 1347937034720051059, guid: cd02b89420454b741846d97a8f2696ac, type: 3}
-  downbullet: {fileID: 4459716505736362487, guid: 5e0c084992009fe41afd1c8c353c2ef9, type: 3}
-  rightbullet: {fileID: 883906096444610893, guid: 7749ac3526daea941aea35d2343e6e74, type: 3}
-  leftbullet: {fileID: 883906096444610893, guid: ee17fa357ae641540848db5b973d8f21, type: 3}
-  animator: {fileID: 0}
